@@ -3,8 +3,10 @@
 using namespace std;
 
 
-void grille (char table[3][3] , int taille) 
+void grille (char table[5][5] , int taille) 
 {
+	//int compteur = 0;
+
 	for (int i=0; i < taille; i++) {
 		for (int j=0; j < taille; j++) {
 			table[i][j] = '_';
@@ -14,20 +16,22 @@ void grille (char table[3][3] , int taille)
 
 
 
-void affichage_grille(char table [3][3], int taille) 
+void affichage_grille(char table [5][5], int taille) 
 {
 	for (int i(0); i < taille; i++)
 	 {
 		for (int j(0); j < taille; j++) 
 		{
 				cout << table[i][j];
-			if (j != 2)
+				
+			if (j != 4)
 				cout << "|";
 			else
 				cout << endl;
 		}
 	}
 	cout << endl;
+
 }
 
 
@@ -38,10 +42,10 @@ struct place
 	int y;
 };
 
-void mettrecroix (char table [3][3], int taille)
+void mettrecroix (char table [5][5], int taille)
 {
 	int x,y = 0;
-	place croix;
+	
 	bool check;
 
 	do
@@ -50,10 +54,9 @@ void mettrecroix (char table [3][3], int taille)
 
 		cin >> x;
 		cin >> y;
-		croix.x = x;
-		croix.y = y;
+		
 
-		if (table[croix.x][croix.y] == '_')
+		if (table[x][y] == '_')
 		{
 			check = true;
 		}
@@ -64,14 +67,14 @@ void mettrecroix (char table [3][3], int taille)
 		
 	}while (check != true);
 
-	table[croix.x][croix.y] = 'X';
+	table[x][y] = 'X';
 
 }
 
 
 
 
-void mettrerond (char table [3][3], int taille)
+void mettrerond (char table [5][5], int taille)
 {
 	int x,y = 0;
 	place rond;
@@ -99,7 +102,7 @@ do
 }
 
 
-bool test_gagner (char table [3][3], int taille)
+bool test_gagner (char table [5][5], int taille)
 {
 	if (table[0][0] == 'X' && table[0][1] == 'X' && table[0][2] == 'X')
 	{

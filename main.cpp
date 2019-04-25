@@ -8,11 +8,11 @@
 int main()
 {
 
-	char table[3][3];
+	char table[5][5];
 	bool check;
-	grille (table,3);
+	grille (table,5);
 	system("clear");
-	affichage_grille(table,3);
+	affichage_grille(table,5);
 
 	do
 	{
@@ -20,17 +20,18 @@ int main()
 	
 
 
-	mettrecroix(table,3);
+	mettrecroix(table,5);
 	system("clear");
+	check = test_gagner(table,5);
 	
 
-	affichage_grille(table,3);
+	affichage_grille(table,5);
 
-	mettrerond(table,3);
+	mettrerond(table,5);
 	system("clear");
 
-	affichage_grille(table,3);
-	check = test_gagner(table,3);
+	affichage_grille(table,5);
+	check = test_gagner(table,5);
 
 	
 	

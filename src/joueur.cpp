@@ -24,10 +24,50 @@ Joueur::~Joueur()
 coordonnees Joueur::tour_de_jeu()
 {
 	coordonnees croix;
+	int chiffre;
+	char lettre;
 	cout << "entrez les coordonnees pour placer une croix" << endl;
-	cin >> croix.x;
-	cin >> croix.y;
+	cin >> lettre;
+	cin >> chiffre;
 
+
+	if (lettre == 'a')
+	{
+		croix.y = 0;
+	}
+	else if (lettre == 'b')
+	{
+		croix.y = 1;
+	}
+	else if (lettre == 'c')
+	{
+		croix.y = 2;
+	}
+	else if (lettre == 'd')
+	{
+		croix.y = 3;
+	}
+	else if (lettre == 'e')
+	{
+		croix.y = 4;
+	}
+	else croix.y = 5;
+	
+
+	if (chiffre > 2 && chiffre < 6)
+	{
+		croix.x =  5 % chiffre;
+	}	
+	else if (chiffre == 2)
+	{
+		croix.x = 3;
+	}
+	else if (chiffre == 1)
+	{
+		croix.x = 4;
+	}
+	else croix.x = 5;
+	
 
 
 	return croix;

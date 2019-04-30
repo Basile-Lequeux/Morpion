@@ -25,14 +25,14 @@ Grille::~Grille()
 
 void Grille::affichage() const
 {
-	cout << "  a b c d e " << endl;
+	
 	for (int i(0); i < 5; i++)
 	 {
 		for (int j(0); j < 5; j++) 
 		{
 			if (j == 0)
 				{
-					cout << i+1;
+					cout << 5-i;
 					cout << " ";
 				}
 				cout << table[i][j];
@@ -46,14 +46,15 @@ void Grille::affichage() const
 				cout << endl;
 		}
 	}
+	cout << "  a b c d e " << endl;
 	cout << endl;
 
 }
 
 
-char Grille::get_table()
+char Grille::get_table(int x,int y)
 {
-	return table[5][5];
+	return table[x][y];
 }
 
 void Grille::set_table(int x ,int y, char _signe)

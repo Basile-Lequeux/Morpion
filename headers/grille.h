@@ -15,7 +15,7 @@ class Grille
 		Grille();
 		~Grille();
 		void affichage()const;
-		char get_table();
+		char get_table(int x,int y);
 		void set_table(int x,int y,char _signe);
 
 		

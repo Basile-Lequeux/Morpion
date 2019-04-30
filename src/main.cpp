@@ -1,5 +1,5 @@
-#include "joueur.h"
-#include "grille.h"
+#include "../headers/joueur.h"
+#include "../headers/grille.h"
 #include <iostream>
 
 

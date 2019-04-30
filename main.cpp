@@ -1,46 +1,28 @@
+#include "joueur.h"
+#include "grille.h"
 #include <iostream>
-#include <string>
-#include "fonctions.h"
-
-
 
 
 int main()
 {
-
-	char table[5][5];
-	bool check;
-	grille (table,5);
-	system("clear");
-	affichage_grille(table,5);
-
-	do
-	{
-		
-	
-
-
-	mettrecroix(table,5);
-	system("clear");
-	check = test_gagner(table,5);
-	
-
-	affichage_grille(table,5);
-
-	mettrerond(table,5);
+	coordonnees place;
 	system("clear");
 
-	affichage_grille(table,5);
-	check = test_gagner(table,5);
 
-	
-	
-
+	Grille table_de_jeu{};
+	table_de_jeu.affichage();
+	Joueur joueur_croix{'X'};
 
 
-	}while (check != true);
-	
+	place = joueur_croix.tour_de_jeu();
+	table_de_jeu.set_table(place.x,place.y,'X');
+	table_de_jeu.affichage();
 
-	
+
+
+
+
+
+
 	return 0;
 }

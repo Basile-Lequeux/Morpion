@@ -31,7 +31,7 @@ coordonnees Joueur::tour_de_jeu()
 	cin >> lettre;
 	cin >> chiffre;
 
-
+	//**changement de la lettre(abscisse) en vrai coordonnées**
 	if (lettre == 'a')
 	{
 		signe.y = 0;
@@ -54,7 +54,7 @@ coordonnees Joueur::tour_de_jeu()
 	}
 	else signe.y = 5;
 	
-
+	//**changement du chiffre(ordonnée) en vrai coordonnées**
 	if (chiffre > 2 && chiffre < 6)
 	{
 		signe.x =  5 % chiffre;
@@ -67,19 +67,10 @@ coordonnees Joueur::tour_de_jeu()
 	{
 		signe.x = 4;
 	}
-	else signe.x = 5;
-
-
-
-
-	
-
-
-	
-	
-
+	else signe.x = 5;	
 
 	return signe;
-
 }
+
+
 

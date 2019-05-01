@@ -28,6 +28,7 @@ class Joueur
 		Joueur(char signe);
 		~Joueur();
 		coordonnees tour_de_jeu();
+		
 
 
 

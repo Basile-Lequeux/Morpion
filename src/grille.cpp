@@ -57,9 +57,23 @@ char Grille::get_table(int x,int y)
 	return table[x][y];
 }
 
-void Grille::set_table(int x ,int y, char _signe)
+bool Grille::set_table(int x ,int y, char _signe)
 {
-	table[x][y] = _signe;
+	if (table[x][y] == '_')
+	{
+		table[x][y] = _signe;
+		return true;
+	}
+	else
+	{
+		cout <<"erreur de saisie, veuillez retaper des coordonnees valides" << endl;
+		system("pause");
+		return false;
+		
+	}
+	
+	
+	
 
 
 }

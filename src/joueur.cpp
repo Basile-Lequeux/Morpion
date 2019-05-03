@@ -83,3 +83,13 @@ coordonnees Joueur::tour_de_jeu()
 
 
 
+void Joueur::set_points()
+{
+	points = points + 1;
+	cout << name << " a gagne bravo !!" << endl;
+}
+
+void Joueur::affiche_points()
+{
+	cout << "points " << name << ": " << points << endl;
+}

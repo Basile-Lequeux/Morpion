@@ -197,61 +197,17 @@ int Grille::check_gagne()
 		return 0;
 	}
 
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void Grille::clear_grille()
+{
+	for (int i=0; i < 5; i++) 
+	{
+		for (int j=0; j < 5; j++) 
+		{
+			table[i][j] = '_';
+		}
+	}
 
 }

@@ -12,11 +12,6 @@ struct coordonnees
 
 
 
-
-
-
-
-
 class Joueur
 {
 	public:
@@ -30,6 +25,8 @@ class Joueur
 		Joueur(char signe);
 		~Joueur();
 		coordonnees tour_de_jeu();
+		void set_points();
+		void affiche_points();
 		
 
 

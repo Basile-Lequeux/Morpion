@@ -3,6 +3,7 @@
 #include <iostream>
 
 
+
 int main()
 {
 	system("clear");
@@ -10,6 +11,7 @@ int main()
 	coordonnees place;
 	bool check;
 	int test_gagne;
+	
 	
 
 	//**Creation des objets**

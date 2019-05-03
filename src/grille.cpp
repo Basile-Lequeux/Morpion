@@ -18,7 +18,7 @@ Grille::Grille()
 
 Grille::~Grille()
 {
-	cout << "destruction" << endl;
+	//cout << "destruction" << endl;
 }
 
 
@@ -35,9 +35,7 @@ void Grille::affichage() const
 					cout << 5-i;
 					cout << " ";
 				}
-				cout << table[i][j];
-				
-				
+				cout << table[i][j];			
 				
 				
 			if (j != 4)
@@ -68,8 +66,8 @@ bool Grille::set_table(int x ,int y, char _signe)
 	{
 		cout <<"erreur de saisie, veuillez retaper des coordonnees valides" << endl;
 		system("pause");
+		system("clear");
 		return false;
-		
 	}
 
 }

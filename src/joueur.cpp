@@ -1,6 +1,8 @@
 #include "../headers/joueur.h"
 #include "../headers/grille.h"
 #include <iostream>
+#include <string>
+
 
 
 using namespace std;
@@ -11,14 +13,17 @@ Joueur::Joueur(char signe)
 	x = 0;
 	y = 0;
 	points = 0;
-	cout << "Joueur cree : " << signe << endl;
+	cout << "nom du joueur qui utilisera --> " << signe << endl;
+	cin >> name;
+	//cout << "Joueur cree : " << signe << endl;
+
 
 }
 
 
 Joueur::~Joueur()
 {
-	cout << "destruction joueur" << endl;
+	//cout << "destruction joueur" << endl;
 
 }
 
@@ -27,9 +32,13 @@ coordonnees Joueur::tour_de_jeu()
 	coordonnees signe;
 	int chiffre;
 	char lettre;
-	cout << "entrez les coordonnees pour placer votre signe" << endl;
+	cout <<"au tour de "<< name << endl;
+	cout << "rentrez une LETTRE pour choisir l'abscisse" << endl << "lettre :";
 	cin >> lettre;
+	cout << endl;
+	cout <<"rentrez un CHIFFRE pour choisir l'ordonnee" << endl << "chiffre :";
 	cin >> chiffre;
+	cout << endl;
 
 	//**changement de la lettre(abscisse) en vrai coordonnées**
 	if (lettre == 'a')

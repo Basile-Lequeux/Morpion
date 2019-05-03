@@ -1,5 +1,6 @@
 #if !defined(__Joueur__)
 #define __Joueur__
+#include <string>
 
 typedef struct coordonnees coordonnees;
 struct coordonnees
@@ -20,6 +21,7 @@ class Joueur
 {
 	public:
 
+		std::string name;
 		int x,y,points;
 		char temp;
 		bool check;
